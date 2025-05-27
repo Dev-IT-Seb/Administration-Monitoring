@@ -1,0 +1,79 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Titre en haut */
+header{
+    z-index: 1;
+    position: relative;
+}
+header .title {
+    padding: 1rem;
+    text-align: center;
+    background-color: #0000008f;
+}
+
+header .title a {
+    text-decoration: none;
+    color: #00ff00;
+    font-size: 2rem;
+}
+
+/* Canvas en arrière-plan */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+}
+
+/* Conteneur connexion */
+.container {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Boîte de connexion */
+.connection {
+    background-color: #000000b3;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ff0066;
+    backdrop-filter: blur(5px);
+}
+
+.connection p {
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #00ff00;
+    text-align: center;
+}
+
+.connection label {
+    display: block;
+    margin-top: 1rem;
+    color: #00ff00;
+    font-family: Arial, sans-serif;
+}
+
+.connection input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border: none;
+    border-radius: 5px;
+    background: #111;
+    color: #ffffff;
+    outline: none;
+}
