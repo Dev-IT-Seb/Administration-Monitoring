@@ -1,26 +1,22 @@
+            /* STYLE CSS */
+/* ---------------------------------- */
 /* Reset de base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* Titre en haut */
-header{
-    z-index: 1;
-    position: relative;
+/* ---------------------------------- */
+/* Fonts */
+@font-face {
+    font-family:"NameFont";
+    src: url("");
 }
-header .title {
-    padding: 1rem;
-    text-align: center;
-    background-color: #0000008f;
-}
-
-header .title a {
-    text-decoration: none;
-    color: #00ff00;
-    font-size: 2rem;
+body{
+    background-color: #000000;
 }
 
+/* ---------------------------------- */
 /* Canvas en arrière-plan */
 canvas {
     position: absolute;
@@ -31,33 +27,51 @@ canvas {
     display: block;
     z-index: 0;
 }
-
+/* ---------------------------------- */
 /* Conteneur connexion */
 .container {
-    position: relative;
-    z-index: 1;
-    height: 100vh;
-    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+}
+/* ---------------------------------- */
+/* Titre en haut */
+.title{
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
 }
 
-/* Boîte de connexion */
+.container h1{
+    color: #00ff00;
+    font-size: 29px;
+}
+.container h1::first-letter{
+    text-transform: uppercase;
+}
+/* ---------------------------------- */
 .connection {
     background-color: #000000b3;
-    padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 20px #00ff0066;
     backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
 }
 
 .connection p {
     font-family: Arial, sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 23px;
     color: #00ff00;
-    text-align: center;
+}
+
+/* Formulaire de connexion */
+form{
+    padding: 1rem;
 }
 
 .connection label {
@@ -65,15 +79,42 @@ canvas {
     margin-top: 1rem;
     color: #00ff00;
     font-family: Arial, sans-serif;
+    font-size: 18px;
 }
 
 .connection input {
-    width: 100%;
+    width: 20rem;
     padding: 0.5rem;
-    margin-top: 0.3rem;
+    margin-top: 0.4rem;
     border: none;
     border-radius: 5px;
     background: #111;
     color: #ffffff;
     outline: none;
+    font-size: 18px;
 }
+/* ---------------------------------- */
+/* BUTTON CONNEXION */
+.connection .cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.connection .cta button{
+    padding: 0.5rem 0.7rem;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border: 1px solid #ffffff7c;
+    font-size: 14px;
+    border-radius: 5%;
+    font-weight: 500;
+}
+
+.connection .cta button:hover{
+    background-color: #00ff008c;
+    color: #ffffff;
+}
+/* ---------------------------------- */

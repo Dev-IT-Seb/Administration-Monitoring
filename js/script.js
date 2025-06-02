@@ -1,27 +1,27 @@
 // ---------------------------------------------------------------------- //
 // BACKGROUND MATRIX
-var canvas = document.querySelector('canvas'),
+let canvas = document.querySelector('canvas'),
 ctx = canvas.getContext('2d');
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-var letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ';
+let letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ';
 letters = letters.split('');
 
-var fontSize = 10, 
+let fontSize = 10, 
     columns = canvas.width / fontSize;
 
-var drops = [];
-for (var i = 0; i < columns; i++) {
+let drops = [];
+for (let i = 0; i < columns; i++) {
   drops[i] = 1;
 }
 
 function draw() {
   ctx.fillStyle = 'hsla(0, 0.00%, 0.00%, 0.10)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  for (var i = 0; i < drops.length; i++) {
-    var text = letters[Math.floor(Math.random() * letters.length)];
+  for (let i = 0; i < drops.length; i++) {
+    let text = letters[Math.floor(Math.random() * letters.length)];
     ctx.fillStyle = '#0f0';
     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
     drops[i]++;
@@ -31,5 +31,5 @@ function draw() {
   }
 }
 
-setInterval(draw, 50);
+setInterval(draw, 45);
 // ---------------------------------------------------------------------- //
